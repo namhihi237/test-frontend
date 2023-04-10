@@ -1,124 +1,96 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <div className='flex justify-between px-5 py-6 bg-[#262626]'>
+        <p className={`text-[24px] pr-4 font-sans font-bold text-white`}>Choose the form of payment</p>
+        <div>
+          <button>
+            <Image src="/cancel.png" alt='cancel' width={18} height={18} className='text-black pt-3' />
+          </button>
+        </div>
+      </div>
+      <div className='px-5 py-5'>
+        {/* card */}
+        <div className='flex px-4 py-4 justify-between bg-[#F7FAFC] items-center rounded-[20px] border border-[#D3DEE9]'>
+          <div className='flex'>
+            <div className='bg-[#EDF2F7] w-14 h-14 rounded-full flex justify-center items-center font-semibold text-[24px]'>J</div>
+            <div className='ml-3'>
+              <p className='font-semibold text-[22px]'>Join</p>
+              <p className='text-[#718096] text-[14px]'>(88) 99602-2404</p>
+            </div>
+          </div>
+          <div>
+            <button className='bg-[#EDF2F7] px-4 py-4 rounded-[8px] font-medium text-[16px]'>Log out</button>
+          </div>
+        </div>
+
+        {/* selected service */}
+        <div className='mt-6'>
+          <p className='font-bold text-[22px] mb-4'>Selected service</p>
+          <div className='flex border border-[#D3DEE9] px-4 rounded-[20px]'>
+            <div className='justify-center items-center flex'>
+              <Image src="/avt.png" alt='cancel' width={55} height={55} className='text-black rounded-md mr-3' />
+            </div>
+            <div className='px-4 py-4 '>
+              <p className='font-medium text-[16px] mb-1'>Japanese lessons</p>
+              <div className='flex text-[#718096] mb-1' >
+                <Image src="/calendar.svg" alt='cancel' width={12} height={12} className='text-black rounded-md' />
+                <p className='text-[10px] ml-2'>Nov 7, 2020 · 11:30</p>
+              </div>
+              <div className='flex text-[#718096]'>
+                <Image src="/place.svg" alt='cancel' width={12} height={12} className='text-black rounded-md' />
+                <p className='text-[10px]  ml-2'>Client`s place</p>
+              </div>
+              <p className='text-[16px]'>Rp 350.000</p>
+            </div>
+          </div>
+        </div>
+
+        {/* location */}
+        <p className='font-medium mt-6 mb-2'>Enter your location</p>
+        <input type='text' className='w-full border rounded-[10px] h-12 px-3 placeholder-[#D3DEE9]' placeholder='Enter address' />
+
+        <p className='font-medium mt-6 mb-2'>Note (optional)</p>
+        <input type='text' className='w-full border rounded-[10px] h-12 px-3 placeholder-[#D3DEE9]' placeholder='Enter text here' />
+
+        {/* Choose pay */}
+        <p className='text-[24px] font-bold mt-6 mb-6'>Choose a way to pay</p>
+        <div class="w-full flex justify-between">
+          <div class="flex-none w-[50%] border border-[#262626] mr-2 rounded-[10px] py-3 flex justify-center">
+            <p className='font-medium'>Cash</p>
+          </div>
+          <div class="flex-grow-0 w-[50%] ml-2 py-3 flex justify-center rounded-[10px] bg-[#EDF2F7]">
+            <p className='font-medium'>Credit card</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="flex-grow w-[50%] ml-2 py-1 rounded-[10px] bg-[#EDF2F7]">
+            <p className='font-medium flex items-center justify-center'>eWallet/</p>
+            <p className='font-medium flex items-center justify-center'>Virtual bank</p>
+          </div>
+        </div>
+
+        {/* agree */}
+        <div className='flex pr-5 mt-5'>
+          <div className='mr-3'>
+            <input type="checkbox" className='text-[#616161]' />
+          </div>
+          <p className='text-[14px] text-[#718096]'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed {' '}
+            <a className='text-[#1E21FF] underline'>
+              do eiusmod
+            </a>
+          </p>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* bottom */}
+      <div className='flex justify-between items-center border-t-2 py-4 px-6'>
+        <a href='\'>Previous</a>
+        <button className='px-10 text-white bg-[#1E21FF] py-3 rounded-[10px]'>Next</button>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   )
 }
