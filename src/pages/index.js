@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <div className='flex justify-between px-5 py-8 bg-[#262626]'>
-        <p className={`text-[24px] pr-8 font-sans font-bold text-white`}>Choose the form of payment</p>
+        <p className={`text-[24px] pr-20 font-sans font-bold text-white`}>Choose the form of payment</p>
         <div>
           <button>
             <Image src="/cancel.png" alt='cancel' width={18} height={18} className='text-black pt-3' />
@@ -17,7 +17,7 @@ export default function Home() {
           <div className='flex'>
             <div className='bg-[#EDF2F7] w-14 h-14 rounded-full flex justify-center items-center font-semibold text-[24px]'>J</div>
             <div className='ml-3'>
-              <p className='font-semibold text-[22px]'>Join</p>
+              <p className='font-semibold text-[22px]'>John</p>
               <p className='text-[#718096] text-[14px]'>(88) 99602-2404</p>
             </div>
           </div>
@@ -58,18 +58,18 @@ export default function Home() {
         {/* Choose pay */}
         <p className='text-[24px] font-bold mt-6 mb-6'>Choose a way to pay</p>
         <div class="w-full flex justify-between">
-          <div class="flex-none w-[50%] border border-[#262626] mr-2 rounded-[10px] py-3 flex justify-center">
+          <button class="flex-none w-[50%] border border-[#262626] mr-2 rounded-[10px] py-3 flex justify-center">
             <p className='font-semibold'>Cash</p>
-          </div>
-          <div class="flex-grow-0 w-[50%] ml-2 py-3 flex justify-center rounded-[10px] bg-[#EDF2F7]">
+          </button>
+          <button class="flex-grow-0 w-[50%] ml-2 py-3 flex justify-center rounded-[10px] bg-[#EDF2F7]">
             <p className='font-semibold'>Credit card</p>
-          </div>
+          </button>
         </div>
         <div class="mt-4">
-          <div class="flex-grow w-[50%] ml-2 py-1 rounded-[10px] bg-[#EDF2F7]">
+          <button class="flex-grow w-[50%] ml-2 py-1 rounded-[10px] bg-[#EDF2F7]">
             <p className='font-semibold flex items-center justify-center'>eWallet/</p>
             <p className='font-semibold flex items-center justify-center'>Virtual bank</p>
-          </div>
+          </button>
         </div>
 
         {/* agree */}
@@ -79,7 +79,7 @@ export default function Home() {
           </div>
           <p className='text-[14px] text-[#718096]'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed {' '}
-            <a className='text-[#1E21FF] underline'>
+            <a href='\' className='text-[#1E21FF] underline'>
               do eiusmod
             </a>
           </p>
