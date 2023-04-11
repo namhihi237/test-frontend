@@ -7,7 +7,7 @@ export default function Home() {
         <p className={`text-[24px] pr-20 font-sans font-bold text-white`}>Choose the form of payment</p>
         <div>
           <button>
-            <Image src="/cancel.png" alt='cancel' width={18} height={18} className='text-black pt-3' />
+            <Image src="/images/cancel.png" alt='cancel' width={18} height={18} className='text-black pt-3' />
           </button>
         </div>
       </div>
@@ -31,16 +31,16 @@ export default function Home() {
           <p className='font-bold text-[22px] mb-4'>Selected service</p>
           <div className='flex border border-[#D3DEE9] px-4 rounded-[20px]'>
             <div className='justify-center items-center flex'>
-              <Image src="/avt.png" alt='cancel' width={55} height={55} className='text-black rounded-md mr-3' />
+              <Image src="/images/avt.png" alt='cancel' width={55} height={55} className='text-black rounded-md mr-3' />
             </div>
             <div className='px-4 py-4 '>
               <p className='font-semibold text-[16px] mb-1'>Japanese lessons</p>
               <div className='flex text-[#718096] mb-1' >
-                <Image src="/calendar.svg" alt='cancel' width={12} height={12} className='text-black rounded-md' />
+                <Image src="/images/calendar.svg" alt='cancel' width={12} height={12} className='text-black rounded-md' />
                 <p className='text-[10px] ml-2'>Nov 7, 2020 · 11:30</p>
               </div>
               <div className='flex text-[#718096]'>
-                <Image src="/place.svg" alt='cancel' width={12} height={12} className='text-black rounded-md' />
+                <Image src="/images/place.svg" alt='cancel' width={12} height={12} className='text-black rounded-md' />
                 <p className='text-[10px]  ml-2'>Client`s place</p>
               </div>
               <p className='text-[16px] font-semibold'>Rp 350.000</p>

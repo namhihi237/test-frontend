@@ -14,3 +14,30 @@ body {
 	color: #262626;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('/fonts/NotoSans-Medium.woff2') format('woff2'),
+		url('/fonts/NotoSans-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('/fonts/NotoSans-SemiBold.woff2') format('woff2'),
+		url('/fonts/NotoSans-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('/fonts/NotoSans-Bold.woff2') format('woff2'),
+		url('/fonts/NotoSans-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
